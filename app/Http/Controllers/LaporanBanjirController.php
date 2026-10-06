@@ -23,4 +23,27 @@ class LaporanBanjirController extends Controller
             'tinggi'
         ));
     }
+
+    public function daftar()
+    {
+        $laporan = [
+            [
+                'nama' => 'Budi',
+                'lokasi' => 'Dayeuhkolot',
+                'tinggi' => 20
+            ],
+            [
+                'nama' => 'Siti',
+                'lokasi' => 'Baleendah',
+                'tinggi' => 50
+            ],
+            [
+                'nama' => 'Andi',
+                'lokasi' => 'Banjaran',
+                'tinggi' => 90
+            ]
+        ];
+
+        return view('laporan.daftar', compact('laporan'));
+    }
 }

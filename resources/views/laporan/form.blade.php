@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.app')
 
-@section('title', 'Form LaporBanjir')
+@section('title', 'Form Pelaporan')
 
 @section('content')
 
@@ -8,10 +8,10 @@
 
     <div class="card">
 
-        <h1>Form Pelaporan Banjir</h1>
+        <h2>Form Pelaporan Banjir</h2>
 
-        <p style="margin-bottom: 25px; color: #666;">
-            Silakan isi data kejadian banjir di wilayah Anda.
+        <p>
+            Silakan isi data kejadian banjir.
         </p>
 
         <form action="{{ route('laporan.proses') }}" method="POST">
@@ -34,6 +34,7 @@
 
             </div>
 
+
             <div class="form-group">
 
                 <label for="lokasi">
@@ -49,6 +50,7 @@
                 >
 
             </div>
+
 
             <div class="form-group">
 
@@ -66,6 +68,7 @@
                 >
 
             </div>
+
 
             <button type="submit">
                 Kirim Laporan

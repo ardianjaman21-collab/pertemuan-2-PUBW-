@@ -1,4 +1,4 @@
- @extends('layout')
+@extends('layouts.app')
 
 @section('title', 'Konfirmasi Laporan')
 
@@ -6,59 +6,33 @@
 
 <div class="container">
 
+    <x-alert>
+        Laporan berhasil dikirim!
+    </x-alert>
+
+
     <div class="card">
 
-        <div class="success">
+        <h2>Konfirmasi Laporan</h2>
 
-            <h1>✅ Laporan Berhasil</h1>
+        <p>
+            <strong>Nama Pelapor:</strong>
+            {{ $nama }}
+        </p>
 
-            <p style="color: #666;">
-                Data laporan banjir berhasil diterima.
-            </p>
+        <p>
+            <strong>Lokasi Kejadian:</strong>
+            {{ $lokasi }}
+        </p>
 
-        </div>
+        <p>
+            <strong>Tinggi Genangan:</strong>
+            {{ $tinggi }} cm
+        </p>
 
-        <div class="data">
 
-            <div class="label">
-                Nama Pelapor
-            </div>
-
-            <div class="value">
-                {{ $nama }}
-            </div>
-
-        </div>
-
-        <div class="data">
-
-            <div class="label">
-                Lokasi Kejadian
-            </div>
-
-            <div class="value">
-                {{ $lokasi }}
-            </div>
-
-        </div>
-
-        <div class="data">
-
-            <div class="label">
-                Tinggi Genangan Air
-            </div>
-
-            <div class="value">
-                {{ $tinggi }} cm
-            </div>
-
-        </div>
-
-        <a href="{{ route('laporan.form') }}"
-           class="btn">
-
-            Buat Laporan Baru
-
+        <a href="{{ route('laporan.form') }}">
+            Kembali ke Form
         </a>
 
     </div>
